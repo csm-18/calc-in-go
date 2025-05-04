@@ -1,6 +1,9 @@
 package main
 
-import "fmt"
+import (
+	"calc/calc"
+	"fmt"
+)
 
 const VERSION = "1.0.0"
 
@@ -19,8 +22,7 @@ func main() {
 			continue
 		}
 
-		//debug print
-		println("input:", exp)
+		calc.Calc(exp)
 
 	}
 }
