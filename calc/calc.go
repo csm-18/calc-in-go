@@ -15,8 +15,15 @@ func Calc(exp string) {
 		return
 	}
 
-	//debug print
-	fmt.Println(exp)
+	//get tokens from expression
+	err, tokens := lexer(exp)
+	if err != nil {
+		fmt.Println(err)
+		return
+	}
+
+	//debug print tokens
+	fmt.Printf("tokens: %v\n", tokens)
 }
 
 func valid_symbols(exp string) bool {
