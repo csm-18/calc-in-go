@@ -23,7 +23,7 @@ func Calc(exp string) {
 	}
 
 	//debug print tokens
-	err, tokens = multiply_divide_remainder(tokens)
+	err, tokens = add_subtract(tokens)
 	if err != nil {
 		fmt.Println(err)
 		return
