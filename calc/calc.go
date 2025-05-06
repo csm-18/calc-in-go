@@ -23,6 +23,12 @@ func Calc(exp string) {
 	}
 
 	//debug print tokens
+	err, tokens = multiply_divide_remainder(tokens)
+	if err != nil {
+		fmt.Println(err)
+		return
+
+	}
 	fmt.Printf("tokens: %v\n", tokens)
 }
 
